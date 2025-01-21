@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background: #2e294e;
+  --text-dark: #292f36;
+  --off-white: #f7fff7;
+  --orange: #fb9a12;
+  --red: #e03616;
+  --light-grey: #ebe9ea;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-dark);
+  font-family: Sofia Sans;
+  font-weight: 100;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  padding: 1rem;
+  background-color: var(--off-white);
+  width: 100%;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.header-title {
+  font-size: 4rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  padding-top: 2rem;
+}
+
+fieldset {
+  border: none;
+  margin-top: 1rem;
+  min-width: 350px;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset > input {
+  width: 72%;
+  height: 2.5rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+fieldset > #button {
+  width: 5rem;
+  height: 1.7rem;
+  border: none;
+  border-radius: 10px;
+  margin-left: 15px;
+  font-size: 0.8rem;
+  color: var(--off-white);
+  background-color: var(--orange);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.todo {
+  background-color: var(--off-white);
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  min-width: 350px;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  cursor: pointer;
+}
+
+.todo-text {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.todo-edit {
+  width: 3.2rem;
+  height: 1.7rem;
+  border: none;
+  border-radius: 10px;
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--off-white);
+  background-color: var(--orange);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.todo-delete {
+  width: 3.2rem;
+  height: 1.7rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  color: var(--off-white);
+  background-color: var(--red);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.todo-done {
+  text-decoration: line-through var(--red) 5px;
+}
+
+.edit-input {
+  height: 2rem;
+  width: 300px;
+  background-color: var(--light-grey);
+  border: solid 0.5px grey;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin-right: 10px;
+  padding-left: 10px;
+  font-size: 1rem;
+}
+
+.button-done {
+  width: 5rem;
+  height: 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: var(--off-white);
+  background-color: var(--orange);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.delete-all {
+  width: 10rem;
+  height: 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: var(--off-white);
+  background-color: var(--red);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin-bottom: 5rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 800px) {
+  fieldset {
+    min-width: 800px;
+  }
+
+  fieldset > input {
+    font-size: 1.2rem;
+  }
+
+  .todo {
+    height: 4rem;
+    min-width: 700px;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .todo-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .todo-edit {
+    width: 5rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  .todo-delete {
+    width: 5rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  fieldset > #button {
+    width: 5.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+}
